@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/13.4.css" />
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+$(function(){
+	var num1=0;
+	var num2=0;
+	var num3=0
+	$('#img1').click(function(){
+		setTimeout(function(){
+		num3+=360;
+		$('#img1').css({'transform':'rotate3d(1,0,0,'+num3+'deg)'})
+		
+		},0)
+		})
+	for(var i=0;i<$('#div5 img').length;i++){
+	      
+	
+	$('#div5 img:eq('+i+')').mouseover(function(){
+		
+		 
+		   $(this).animate({opacity:'0.3'},1000);
+		})
+	$('#div5 img:eq('+i+')').mouseout(function(){
+		    $(this).stop(true,true);
+			
+		  
+		   $(this).animate({opacity:'1'},0);
+		})
+		
+	
+	
+}
+
+	
+	
+     $('.div4_5:eq(0)').click(function(){
+	
+		var time=setTimeout(function(){
+		  num1+=360;
+		  
+		  $('#img4_1').css({'transform':'rotate('+num1+'deg)'})
+	      	
+			 },0) 
+		
+	 
+		  })
+	 $('.div4_5:eq(1)').click(function(){
+	
+		var time=setTimeout(function(){
+		  num2+=360;
+		  
+		  $('#img4_2').css({'transform':'rotate('+num2+'deg)'})
+	      	
+			 },0) 
+		
+	 
+		  })
+		
+for(var i=0;i<$('.div3_img').length;i++){
+	      
+	 $('.div3_img:eq('+i+')').attr('num',i);
+	$('.div3_img:eq('+i+')').mouseover(function(){
+		
+		   $('.div3_span:eq('+$(this).attr('num')+')').animate({left:'0%'},1000)
+		   $(this).animate({height:'+=200px',width:'+=200px'},1000);
+		})
+	$('.div3_img:eq('+i+')').mouseout(function(){
+		    $(this).stop(true,true);
+			$('.div3_span:eq('+$(this).attr('num')+')').stop(true,true);
+		   $('.div3_span:eq('+$(this).attr('num')+')').animate({left:'150%'},0)
+		   $(this).animate({height:'-=200px',width:'-=200px'},0);
+		})
+		
+	
+	
+}
+$('.div3_img_div:eq(0)').css({'width':'468px','height':'393px','left':'0','top':'0'})
+$('.div3_img_div:eq(1)').css({'width':'338px','height':'393px','left':'468px','top':'0px'})
+$('.div3_img_div:eq(2)').css({'width':'345px','height':'412px','left':'0','top':'393px'})
+$('.div3_img_div:eq(3)').css({'width':'450px','height':'412px','left':'345px','top':'393px'})
+	})
+</script>
+
+</head>
+
+<body>
+<div id="box">
+  <div id="div1"><img style="padding-left:10% " src="img/15.png" /><div id="div1_1"><div>home</div><div> menue</div><div> contackt</div><div> about</div><div style="margin-right:100px"> blog</div></div><input id="text" type="text" /><span id="span1_1">register | login</span></div>
+  <div id="div2"><div id="img_div"><img style="width:1903px" id="img1" src="img/1.png" /></div></div>
+<div id="div3"><h2 id="h2" align="center">find <span id="span1">chefi</span> find <span id="span2">necifei</span> be found</h2><p align="center">where you find chef & come to get discovered feature chefs</p><div id="div3_1" class="div6"><h3 align="center" id="h3">cake</h3><hr class="hr"/><div id="box1"><div class="div3_img_div"><img class="div3_img" src="img/2.png" /><span class="div3_span">披萨</span></div><div class="div3_img_div"><img class="div3_img" src="img/3.png" /><span class="div3_span">酸奶</span></div><div class="clean"></div><div class="div3_img_div"><img class="div3_img" src="img/4.png" /><span class="div3_span">水果</span></div><div class="div3_img_div"><img class="div3_img" src="img/5.png" /><span class="div3_span">面包</span><div class="clean"></div></div></div></div>
+    <div id='div4'><div class="div6"><h3 align="center" id="h3">other</h3><hr class="hr"/><div id="box2"><div id="box4_1"><div id="div4_3" align="center">Best food for you<br /><br /><br /><div class="div4_5">let's go</div></div><img src="img/6.png" width="498" height="325"id="img4_1" /></div><br /><div id="box4_2"><img id="img4_2" src="img/7.png" /><div id="div4_4" align="center">ther is always a right for you<br /><br /><br /><div class="div4_5">let's go</div></div></div><div class="clean"></div></div></div>
+ 
+      <div id="div5"><div class="div6"><h3 align="center" id="h3">Candys</h3><hr class="hr"/><div id="box3"><img src="img/8.png" /><img src="img/9.png" /><img src="img/10.png" /><br /><img src="img/11.png" /><img id="img5_1" src="img/12.png" /><img id="img5_2" src="img/13.png" /></div></div></div>
+  </div>
+  
+
+  <div id="div6"><img id="div6_img1" src="img/五角星.png" /><img id="div6_img2" src="img/书包.png" /><img id="div6_img3" src="img/人物.png" /><img id="div6_img4" src="img/房子.png" /><br /><img id="div6_img5" src="img/项目.png" /></div>
+</div>
+</body>
+</html>
